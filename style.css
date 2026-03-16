@@ -1,87 +1,301 @@
 *{
- margin: 0;
- padding: 0;
- font-family: *poppins*,sans-serif;   
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
-ul{
-    list-style: none;
+
+body{
+background:black;
+color:white;
 }
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:2% 6%;
+}
+
+.liste{
+flex:1;
+text-align:right;
+}
+
+.liste ul li{
+display:inline-block;
+list-style:none;
+padding:8px 12px;
+position:relative;
+}
+
 a{
-  text-decoration: none;  
+text-decoration:none;
+color:gold;
 }
-.container{
-    background-image: url(./img/arri\ copie.png);
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+background:black;
+padding:10px;
+top:30px;
+border-radius:10px;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.text{
+padding:40px 84px;
+}
+
+.text h1{
+font-size:50px;
+}
+
+.text span{
+color:gold;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:gold;
+border-radius:20px;
+color:black;
+margin-top:20px;
+}
+
+.fond{
+background:black;
+min-height:100vh;
+}
+
+.row{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.colon-1,
+.col-2{
+flex-basis:15%;
+padding:10px;
+min-width:200px;
+text-align:center;
+transition:0.5s;
+}
+
+.colon-1 img,
+.col-2 img{
+width:100%;
+border-radius:20px;
+box-shadow:gold 20px 15px 35px;
+}
+
+.colon-1:hover,
+.col-2:hover{
+transform:translateY(-10px);
+}
+
+.title,
+.title1{
+text-align:center;
+font-size:40px;
+margin-top:50px;
+}
+
+.title span,
+.title1 span{
+color:gold;
+}
+
+.whatsapp-btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:8px 15px;
+border-radius:20px;
+margin-top:10px;
+}
+
+
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:25px;
+padding:15px;
+border-radius:50%;
+}
+
+.center{
+text-align:center;
+padding:20px;
+}
+.img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 20%;
+    width: 400px; /* ou la largeur exacte que tu avais */
+}
+
+.img img {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
 }
-.carte{
-    width: 350px;
-    height: 610px;
-    background-color: #3d265c;
-    border-radius: 10px;
-    box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin: 20px 10px;
+.icone i {
+    color: gold;
+    margin-right: 2px; /* petit espace entre les étoiles */
 }
-.modele{
-    height: 250px;
-    height: 50%;
-    max-width: 80%;
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:gold;
+color:black;
+border-radius:20px;
+margin-top:20px;
+font-weight:600;
+transition:all 0.4s ease;
 }
-.detail{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
+
+.btn:hover{
+background:orange;
+color:white;
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(255,215,0,0.5);
 }
-.detail p{
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+.dropdown{
+position:relative;
 }
-.detail h1{
-    color: deeppink ;
+
+.dropdown-menu{
+display:none;
+position:absolute;
+background:black;
+padding:10px;
+border-radius:10px;
+top:30px;
+left:0;
 }
-.SNEAKERS{
-    color: rgb(105, 99, 99);
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin: 20px;
+
+.dropdown-menu li{
+display:block;
+padding:5px 10px;
 }
-.logo{
-    width: 200px;
+
+.dropdown-menu li a{
+color:gold;
 }
-.carte:hover{
-    background-color: #3068a8;
-    transform-style: preserve-3d;
-    transform: scale(1.02);
-    transition: all ease 0.3s;
+
+.dropdown:hover .dropdown-menu{
+display:block;
 }
-.carte:hover .SNEAKERS{
-    color: snow;
-    transition: all ease 0.3;
+.panier{
+font-size:22px;
+cursor:pointer;
+transition:0.3s;
 }
-@media(max-width:720px){
-    .carte{
-        width: 94%;
-        height: 560px;
-    }
-    .modele{
-        height: 250px;
-    }
-    .detail{
-        font-size: 16px;
-        width: 250px;
-    }
+
+.panier:hover{
+color:gold;
+transform:scale(1.2);
 }
-.container{
-     grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+.navbar img{
+transition:0.4s;
+}
+
+.navbar img:hover{
+transform:scale(1.1);
+}
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 6%;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+}
+.liste ul li a{
+position:relative;
+font-weight:500;
+transition:0.3s;
+}
+
+.liste ul li a::after{
+content:'';
+width:0%;
+height:2px;
+background:gold;
+position:absolute;
+left:0;
+bottom:-5px;
+transition:0.4s;
+}
+
+.liste ul li a:hover::after{
+width:100%;
+}
+
+.liste ul li a:hover{
+color:white;
+}
+/* ===== CONTACT ===== */
+
+.contact{
+background:#e9e9e9;
+padding:80px 0;
+text-align:center;
+}
+
+/* container icones */
+.social-icons{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+/* boutons ronds */
+.social-icons a{
+width:70px;
+height:70px;
+background:gold;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+transition:0.4s;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* icones */
+.social-icons a i{
+color:white;
+font-size:28px;
+}
+
+/* effet hover */
+.social-icons a:hover{
+transform:translateY(-10px) scale(1.1);
+background:gold;
+}
+.contact{
+background:black;
+padding:50px 0;
+text-align:center;
 }
